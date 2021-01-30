@@ -9,7 +9,26 @@ create the following database structure:
   `Figure` (think historical figure).
 
 - A landmark `belongs_to` a figure and a figure `has_many` landmarks.
+
+#### A weapon belongs to a Character and a character has many weapons#
+#### ####Landmarks have a figure_id to link them to the figure they belong to
+
+#### class CreateLandmarks < ActiveRecord::Migration
+####  def change
+####    create_table :landmarks do |t|
+####      t.string :name
+####      t.integer :figure_id
+####      t.integer :year_completed
+####        end
+####     end
+#### end
+
+
+
 - Titles and figures have a "many-to-many" relationship, so we'll need a join table.
+
+
+
 
 #### Domain Model
 
